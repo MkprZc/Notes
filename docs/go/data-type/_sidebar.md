@@ -1,0 +1,4 @@
+- [字符串](docs/go/data-type/str.md)
+- [数组](docs/go/data-type/array.md)
+- [切片]
+- [map]

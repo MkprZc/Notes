@@ -1,9 +1,15 @@
+## 命名规则
 
-# 变量
+Go的函数、变量、常量、自定义类型、包(package)的命名方式遵循以下规则：
 
-## 变量的命名
+> 1. 首字符可以是任意的Unicode字符（字母等）、下划线
+> 2. 剩余字符可以是Unicode字符（字母、数字等）、下划线
+> 3. 字符长度不限
+> 4. 不允许使用系统关键字
+> 5. 不允许使用数组开头
+> 6. 区分大小写
+> 7. 见名知义
 
-不允许使用的 Go 的关键字进行命名
 
 ## Go 语言关键字
 
@@ -34,3 +40,23 @@
 |continue    |        |流程控制 |单任务流程控制 |循环流程|
 |goto        |        |流程控制 |单任务流程控制 |-|
 |defer       |        |流程控制 |延时流程控制   |-|
+
+
+## 变量命名测试
+
+```go
+	var 重量 int = 10  // 不推荐使用
+	var int int  = 20  // 不推荐使用，还把 int 变成了变量
+	var main int = 30  // 不推荐使用
+	var var int  = 40  // 报错，不允许使用 Go 关键字作为变量名
+	var 1A int   = 50  // 报错
+	var -B int   = 60  // 报错
+
+	fmt.Println(重量)
+	fmt.Println(int)
+	fmt.Println(main)
+	fmt.Println(test)  // 输出函数内存地址
+	fmt.Println(var)
+	fmt.Println(1A)
+	fmt.Println(-B)
+```

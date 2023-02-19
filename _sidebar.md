@@ -1,6 +1,6 @@
 - Go
 
-  - [基础](docs/go/base/var.md)
+  - [基础](docs/go/base/name.md)
   - [数据类型](docs/go/data-type/str.md)
   - [Runtime 内存分配]()
   - [GC 垃圾回收]()

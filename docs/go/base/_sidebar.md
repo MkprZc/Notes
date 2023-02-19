@@ -1,3 +1,2 @@
-- [变量](docs/go/base/var.md)
-
-- [其他]()
+- [命名](docs/go/base/name.md)
+- [内置函数](docs/go/base/built-in-func.md)

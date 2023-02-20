@@ -1,2 +1,3 @@
 - [命名](docs/go/base/name.md)
 - [内置函数](docs/go/base/built-in-func.md)
+- [init main 函数](docs/go/base/init-main.md)

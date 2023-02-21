@@ -15,3 +15,8 @@
     len               -- 来求长度，比如string、array、slice、map、channel ，返回长度
     print、println     -- 底层打印函数，在部署环境中建议使用 fmt 包
 ```
+
+
+### 参考
+
++ <https://www.topgoer.cn/docs/golang/chapter02-2>

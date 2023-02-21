@@ -21,3 +21,8 @@
 > 2. 对同一个 package 中不同文件是按文件名字符串比较“从小到大”顺序调用各文件中的 `init()` 函数
 > 3. 对于不同的 package ，如果不相互依赖的话，按照 main 包中”先 import 的后调用”的顺序调用其包中的 `init()` ，如果 package 存在依赖，则先调用最早被依赖的 package 中的 `init()` ，最后调用 `main` 函数
 > 4. 如果 `init` 函数中使用了 `println()` 或者 `print()` 你会发现在执行过程中这两个不会按照你想象中的顺序执行。这两个函数官方只推荐在测试环境中使用，对于正式环境不要使用
+
+
+## 参考
+
++ <https://www.topgoer.cn/docs/golang/chapter02-3>

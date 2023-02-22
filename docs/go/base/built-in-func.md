@@ -1,4 +1,4 @@
-# 内置函数
+## 函数列表
 
 ```go
     append            -- 用来追加元素到数组、slice中,返回修改后的数组、slice
@@ -17,6 +17,6 @@
 ```
 
 
-### 参考
+## 参考
 
 + <https://www.topgoer.cn/docs/golang/chapter02-2>

@@ -36,3 +36,10 @@ func aa() func() int {
 defer 会在return 之前执行
 
 按照指定顺序遍历map
+
+
+指针的内存图未画
+
+switch 
+
+排序算法（算法库）

@@ -2,3 +2,8 @@
 - [内置函数](docs/go/base/built-in-func.md)
 - [init main 函数](docs/go/base/init-main.md)
 - [常量计数器](docs/go/base/iota.md)
+- [switch](docs/go/base/switch.md)
+- [defer](docs/go/base/defer.md)
+- [recover 错误处理](docs/go/base/recover.md)
+- [匿名函数](docs/go/base/anonymous-func.md)
+- [闭包](docs/go/base/closure.md)

@@ -1,3 +1,7 @@
+## switch 介绍
+
+> switch 语句用于基于不同条件执行不同动作，每一个 case 分支都是唯一的，从上直下逐一测试，直到匹配为止。
+> 分支表达式可以是任意类型，不限于常量。可省略 break，默认自动终止。
 
 ```go
 	//switch 表达式{case 值1：代码1 case 值2：代码2} 那个分支满足条件执行那一个
@@ -31,4 +35,21 @@
 	//case 3.14:
 	//	fmt.Println(pi)
 	//}
+```
+
+
+## Type Switch
+
+> switch 语句还可以被用于 type-switch 来判断某个 interface 变量中实际存储的变量类型
+
+```go
+switch x.(type){
+    case type:
+       statement(s)      
+    case type:
+       statement(s)
+    /* 你可以定义任意个数的case */
+    default: /* 可选 */
+       statement(s)
+} 
 ```

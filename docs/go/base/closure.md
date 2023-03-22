@@ -44,9 +44,6 @@ func main() {
 // 2
 ```
 
-
-外部引用函数参数局部变量
-
 ```go
 // 外部引用函数参数局部变量
 func add(base int) func(int) int {

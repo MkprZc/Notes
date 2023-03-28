@@ -8,3 +8,4 @@
 - [结构体](docs/go/data-type/struct.md)
 - [空结构体](docs/go/data-type/empty-struct.md)
 - [interface](docs/go/data-type/interface.md)
+- [channel](docs/go/data-type/channel.md)

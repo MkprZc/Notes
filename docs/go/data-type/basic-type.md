@@ -86,6 +86,25 @@ func main() {
 ```
 
 
+## 自定义类型
+
+```go
+// 自定义类型是定义了一个全新的类型。我们可以基于内置的基本类型定义，也可以通过struct定义
+
+type MyInt int
+```
+
+
+## 类型别名
+
+```go
+	// go 默认的（rune和byte就是类型别名）
+
+    type byte = uint8
+    type rune = int32
+```
+
+
 ## 参考
 
 + <https://www.topgoer.cn/docs/golang/chapter03-8>

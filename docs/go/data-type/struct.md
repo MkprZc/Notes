@@ -65,6 +65,40 @@ fmt.Printf("p2=%#v\n", p2) //p2=&main.person{name:"测试", city:"北京", age:1
     2.接收者是拷贝代价比较大的大对象
     3.保证一致性，如果有某个方法使用了指针接收者，那么其他的方法也应该使用指针接收者。
 
+> 注意：当接受者是指针时，即使用值类型调用那么函数内部也是对指针的操作
+
+```go
+type Data struct {
+    x int
+}
+
+func (self Data) ValueTest() { // func ValueTest(self Data);
+    fmt.Printf("Value: %p\n", &self)
+}
+
+func (self *Data) PointerTest() { // func PointerTest(self *Data);
+    fmt.Printf("Pointer: %p\n", self)
+}
+
+func main() {
+    d := Data{}
+    p := &d
+    fmt.Printf("Data: %p\n", p)
+
+    d.ValueTest()   // ValueTest(d)
+    d.PointerTest() // PointerTest(&d)
+
+    p.ValueTest()   // ValueTest(*p)
+    p.PointerTest() // PointerTest(p)
+}
+
+// 输出
+// Data: 0xc42007c008
+// Value: 0xc42007c018
+// Pointer: 0xc42007c008
+// Value: 0xc42007c020
+// Pointer: 0xc42007c008
+```
 
 ```go
 type Student struct {
@@ -122,6 +156,37 @@ func main() {
 	stu.Perple1.Name="法师"
 	fmt.Println(stu)
 }
+```
+
+```go
+type User struct {
+    id   int
+    name string
+}
+
+type Manager struct {
+    User
+    title string
+}
+
+func (self *User) ToString() string {
+    return fmt.Sprintf("User: %p, %v", self, self)
+}
+
+func (self *Manager) ToString() string {
+    return fmt.Sprintf("Manager: %p, %v", self, self)
+}
+
+func main() {
+    m := Manager{User{1, "Tom"}, "Administrator"}
+
+    fmt.Println(m.ToString())
+
+    fmt.Println(m.User.ToString())
+}
+// 输出
+// Manager: 0xc000076480, &{{1 Tom} Administrator}
+// User: 0xc000076480, &{1 Tom}
 ```
 
 

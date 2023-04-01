@@ -41,6 +41,7 @@
 ## Type Switch
 
 > switch 语句还可以被用于 type-switch 来判断某个 interface 变量中实际存储的变量类型
+> 类型断言的 方便语法
 
 ```go
 switch x.(type){

@@ -92,6 +92,10 @@ func main() {
 // 自定义类型是定义了一个全新的类型。我们可以基于内置的基本类型定义，也可以通过struct定义
 
 type MyInt int
+
+func (mi MyInt) string() string{
+	return strconv.Itoa(int(mi))
+)
 ```
 
 

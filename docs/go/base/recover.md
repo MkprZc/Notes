@@ -171,5 +171,72 @@ func main() {
 } 
 ```
 
+## 捕获 panic 的位置
+
+```go
+package main
+
+import (
+	"fmt"
+	"runtime"
+)
+
+func main() {
+	ch := make(chan struct{})
+
+	test(ch)
+
+	<-ch
+}
+
+func test(ch chan struct{}) {
+	go func(ch chan struct{}) {
+
+		defer func() {
+			ch <- struct{}{}
+		}()
+
+		defer func() {
+			if err := recover(); err != nil {
+				fmt.Println("-----recover-------", err)
+
+				for i := 0; i < 9; i++ {
+					
+					// pc 是uintptr这个返回的是函数指针
+      				// file 是函数所在文件名目录
+      				// line 所在行号
+     				// ok 是否可以获取到信息
+
+					pc, file, line, ok := runtime.Caller(i)
+					pcName := runtime.FuncForPC(pc).Name() //获取函数名
+					fmt.Println(fmt.Sprintf("%v   %s   %d   %t   %s", pc, file, line, ok, pcName))
+				}
+
+			}
+		}()
+
+		fn(10)
+
+	}(ch)
+}
+
+func fn(i int) {
+	var d [3]int
+	d[i] = 10
+}
+
+// 输出
+-----recover------- runtime error: index out of range [10] with length 3
+3984658   C:/Users/Administrator/Desktop/1.go   28   true   main.test.func1.2
+3614854   D:/Program Files/Go/src/runtime/panic.go   838   true   runtime.gopanic
+3607998   D:/Program Files/Go/src/runtime/panic.go   89   true   runtime.goPanicIndex
+3985157   C:/Users/Administrator/Desktop/1.go   43   true   main.fn
+3985142   C:/Users/Administrator/Desktop/1.go   36   true   main.test.func1
+3784032   D:/Program Files/Go/src/runtime/asm_amd64.s   1571   true   runtime.goexit
+0      0   false
+0      0   false
+0      0   false
+```
+
 ## 参考
 + <https://www.topgoer.cn/docs/golang/chapter05-7>

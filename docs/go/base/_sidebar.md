@@ -10,4 +10,5 @@
 - [recover 错误处理](docs/go/base/recover.md)
 - [反射](docs/go/base/reflect.md)
 - [select](docs/go/base/select.md)
+- [sync 包](docs/go/base/sync.md)
 

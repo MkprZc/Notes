@@ -1,3 +1,8 @@
+## select 语句
+
+> select 是Go中的一个控制结构，类似于用于通信的switch语句。每个case必须是一个通信操作，要么是发送要么是接收
+> select 随机执行一个可运行的case。如果没有case可运行，它将阻塞，直到有case可运行。一个默认的子句应该总是可运行的
+
 
 ```go
 package main
@@ -34,4 +39,28 @@ func main() {
 	}
 }
 
+```
+
+
+### 退出
+
+```go
+//主线程（协程）中如下：
+var shouldQuit=make(chan struct{})
+fun main(){
+    {
+        //loop
+    }
+    //...out of the loop
+    select {
+        case <-c.shouldQuit:
+            cleanUp()
+            return
+        default:
+        }
+    //...
+}
+
+//再另外一个协程中，如果运行遇到非法操作或不可处理的错误，就向shouldQuit发送数据通知程序停止运行
+close(shouldQuit)
 ```

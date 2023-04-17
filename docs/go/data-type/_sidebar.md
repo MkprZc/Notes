@@ -4,6 +4,7 @@
 - [字符串-原理](docs/go/data-type/str-principle.md)
 - [数组](docs/go/data-type/array.md)
 - [切片](docs/go/data-type/slice.md)
+- [切片-原理](docs/go/data-type/slice-principle.md)
 - [map](docs/go/data-type/map.md)
 - [指针](docs/go/data-type/ptr.md)
 - [结构体](docs/go/data-type/struct.md)

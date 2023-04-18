@@ -6,6 +6,7 @@
 - [切片](docs/go/data-type/slice.md)
 - [切片-原理](docs/go/data-type/slice-principle.md)
 - [map](docs/go/data-type/map.md)
+- [map-原理](docs/go/data-type/map-principle.md)
 - [指针](docs/go/data-type/ptr.md)
 - [结构体](docs/go/data-type/struct.md)
 - [空结构体](docs/go/data-type/empty-struct.md)

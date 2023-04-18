@@ -41,3 +41,19 @@ func main() {
 	fmt.Println(slice) // [1 2 3 4 5 1 2 3 4 5]
 }
 ```
+
+```go
+func main() {
+	slice := []int{1, 2, 3, 4, 5} //len==cap
+	fmt.Printf("%p\n", slice)     // 0xc0000cc030
+
+	slice = append(slice, 6)  //len=7 cap=10
+	fmt.Printf("%p\n", slice) // 0xc0000b00f0
+
+	slice = append(slice, 6)  //len=8 cap=10
+	fmt.Printf("%p\n", slice) // 0xc0000b00f0
+
+	fmt.Printf("%p\n", &slice) // 获取的是底层切片结构体的内存地址，在同一个函数内是一样的
+
+}
+```

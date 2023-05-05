@@ -78,3 +78,6 @@ bug 记录 c 调用 go，传字符串，在 go 的协程中多次调用会乱码
 mysql 
 软删除（就是用一个字段去标记是否已经删除）
 硬删除（就是 delete）
+
+go Prometheus、Grafana
+(https://cloud.tencent.com/developer/article/1769920)

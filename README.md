@@ -81,5 +81,10 @@ mysql
 软删除（就是用一个字段去标记是否已经删除）
 硬删除（就是 delete）
 
+
+全局变量慎用，如果要每次的请求是不一样的数据，要每次都初始化（java 将 go 的dll 加载到内存中使用）
+空结构体是占用的一块内存
+
+
 go Prometheus、Grafana
 (https://cloud.tencent.com/developer/article/1769920)

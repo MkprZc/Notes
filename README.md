@@ -93,3 +93,13 @@ go Prometheus、Grafana
 动态规划技术
 go 排他锁(Mutex)的原理
 go 分段锁
+
+
+go 的锁能复制嘛
+var lock sync.Mutex
+
+lock2 := lock (复制后就失去了锁的效果)
+
+
+atomic 包
+原子操作 +-1（并发安全）

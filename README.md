@@ -103,3 +103,13 @@ lock2 := lock (复制后就失去了锁的效果)
 
 atomic 包
 原子操作 +-1（并发安全）
+
+
+go 的 happen-before 机制
+
+
+容易出现死锁的地方
+go waitgroup 少了一次 done  无缓冲的channel
+
+
+通过 channel 实现交叉打印

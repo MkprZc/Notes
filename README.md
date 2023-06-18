@@ -113,3 +113,21 @@ go waitgroup 少了一次 done  无缓冲的channel
 
 
 通过 channel 实现交叉打印
+
+
+go context 父子ctx取消机制
+
+
+http 2.0 （前后端如果采用http2.0来开发，怎么写）
+
+
+go socket 编程调用自己写的简单rpc 服务
+
+protobuf 原理，（总结：还是要多看原理哦）
+
+service 是grpc加的，grpc写了一个插件来解析grpc所加的proto内容
+
+
+grpc 
+
+服务端流模式：监控cpu的使用情况

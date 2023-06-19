@@ -131,3 +131,10 @@ service 是grpc加的，grpc写了一个插件来解析grpc所加的proto内容
 grpc 
 
 服务端流模式：监控cpu的使用情况
+
+
+protobuf
+proto 文件里面的字段编号很重要（在多个端共用一个 协议时，编号的数字要相同）
+
+
+protobuf ，协议有提供公共的 message，比如：时间戳等

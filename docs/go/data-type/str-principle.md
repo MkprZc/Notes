@@ -1,3 +1,11 @@
+```go
+func main() {
+	// 在Go语言中，字符串的底层数据结构是一个只读的字节数组，每个字节都代表了一个Unicode字符。字符串的切片操作实际上是基于字节数组进行的
+	str := "hello"
+	fmt.Println(str[len(str):]) // 不会报错，输出空字符串
+}
+```
+
 
 ```go
 func main() {

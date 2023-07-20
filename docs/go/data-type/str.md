@@ -20,6 +20,12 @@
 	fmt.Println(b) // 123\nabc
 ```
 
+```go
+	str := " hel lo "
+	// 去除空格
+	str = strings.Replace(str, " ", "", -1) // hello
+```
+
 
 ## 字符串的常用操作
 

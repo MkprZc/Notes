@@ -7,6 +7,7 @@
   - [GMP 调度]()
   - [channel]()
   - [web]()
+  - [小工具](docs/go/tool/func.md)
 
 - MySQL
 
